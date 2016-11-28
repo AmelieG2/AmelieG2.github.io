@@ -138,7 +138,11 @@
 
 
 
-				<div id="flip"><button type="button" class="btn btn-primary">Activate PLC&#946</button><br></div>
+				<div id="flip">
+
+					<button type="button" class="btn btn-primary">Activate PLC&#946</button>
+					
+				</div>
 
 				<div id="panelA">&#8681;
 
@@ -159,28 +163,27 @@
 
 <script> 
 $(document).ready(function(){
-
-    	$("#flip").click(function(){
-        		$("#panelA").slideToggle("slow");
-    		});
-
-    	$(".btn-primary").click(function() {
+    $("#flip").click(function(){
+        $("#panelA").slideToggle("slow");
+    });
+    $(".btn-primary").click(function() {
 				$(this).addClass("active");
 				$(this).addClass("btn-success");
 				$("div").addClass("open");
 				$(this).html("PLC&#946 activated");	
+			
 		   	});
 
 // This ligne is to get the second button to change value
-		$(".btn-default").click(function(){
+		 $(".btn-default").click(function(){
         		$(this).button('cut').delay(1000).queue(function(){
            		$(this).button('somestringvalue');
             	$(this).dequeue();
-        	});        
+        });        
     });  
+});
 
 
-</script>
-
+</script> 
 
 </body>
