@@ -1,0 +1,83 @@
+/* This is the CSS file for the receptor a1 */
+
+body {
+	font-family: 'Lora', serif;
+	max-width: 600px;
+	margin: 0 auto;
+}	
+
+/*.navbar-default*/
+
+ .container-fluid {
+	background-image: url(http://physrev.physiology.org/content/physrev/96/4/1593/F1.large.jpg);
+	/*background-repeat: repeat;*/
+	background-size: contain, cover;
+	margin: 0 auto;
+	max-width: 600px;
+	color: black;
+	}
+
+.navbar-header {
+	color: black;
+	font-weight: bold;
+	align-self: center;
+}
+
+.dropdown {
+	background-color: rgba(235, 235, 235, 0.5);
+	color: black;
+}	
+
+#alone {
+	background-color: rgba(235, 235, 235, 0.5);
+	color: black;
+}
+
+.container {
+	max-width: 600px;
+	text-align: center justify;
+}	
+
+h1 {
+	text-align: center;
+	text-shadow: 1px 2px 5px
+}	
+
+img {
+	 display: block;
+	 margin: auto;
+	 padding-top: 20px;
+}
+
+figcaption {
+	text-align: center;
+}
+
+.pathway {
+	text-align: center;
+
+}
+
+#receptorg {
+	padding: 0px 50px 25px;
+
+}
+
+.p1{
+	padding: 0px 50px 25px;
+
+}
+
+.p2 {
+	padding: 0px 50px 25px;
+
+}
+
+.btn-primary {
+	margin: 0px 50px 25px;
+
+}
+
+
+{}
+

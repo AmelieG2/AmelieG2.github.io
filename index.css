@@ -1,0 +1,11 @@
+.navbar-default {
+	background-image: url(http://physrev.physiology.org/content/physrev/96/4/1593/F1.large.jpg);
+	background-repeat: repeat;
+	background-size: contain;
+
+}
+
+.dropdown {
+	background-color: rgba(200, 200, 200, 0.75);
+
+}	

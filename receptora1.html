@@ -13,4 +13,168 @@
 
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+	<link rel="stylesheet" type="text/css" href="receptora1.css">
+
+	<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+
 </head>
+
+<body>
+
+<nav class="navbar navbar-default">
+
+  <div class="container-fluid">
+
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">PATHWAYS - <em>How to find your pharmalogical way</em></a>
+    </div>
+
+    <ul class="nav navbar-nav">
+
+      <li id="alone"><a href="index.html">Home</a></li>
+	      <li class="active" class="dropdown">
+			<a class="dropdown-toggle" data-toggle="dropdown" href="#">Adrenergique receptors
+	      		<span class="caret"></span></a>
+	      			<ul class="dropdown-menu">
+	      				<li><a href="receptora1.html">Receptor &#945<sub>1</sub></a></li>
+	      				<li><a href="receptora2.html">Receptor &#945<sub>2</sub></a></li>
+	      				<li><a href="receptorb1.html">Receptor &#946<sub>1</sub></a></li>
+	      				<li><a href="receptorb2.html">Receptor &#946<sub>2</sub></a></li>
+	      			</ul>
+	      </li>
+
+	       <li class="dropdown">
+			<a class="dropdown-toggle" data-toggle="dropdown" href="#">Cholinergic receptors
+	      		<span class="caret"></span></a>
+	      			<ul class="dropdown-menu">
+	      				<li><a href="receptorm1.html">Receptors M1/M3</a></li>
+	      				<li><a href="receptorm2.html">Receptor M2</a></li>
+	      			</ul>
+	      </li>	
+
+	      <li class="dropdown">
+      		<a class="dropdown-toggle" data-toggle="dropdown" href="#">Heart
+      			<span class="caret"></span></a>
+      				<ul class="dropdown-menu">
+      					<li><a href="heartreceptors.html">Receptors</a></li>
+      					<li><a href="heartquizz.html">Test yourself</a></li>
+      				</ul>
+
+	      </li>	
+
+	      <li class="dropdown">
+	      	<a class="dropdown-toggle" data-toggle="dropdown" href="#">Lungs
+	      		<span class="caret"></span></a>
+	      			<ul class="dropdown-menu">
+	      				<li><a href="lungsreceptors.html">Receptors</a></li>
+	      				<li><a href="lungsquizz.html">Test yourself</a></li>
+	      			</ul>
+	      </li>
+
+
+	      <li class="dropdown">
+	      	<a class="dropdown-toggle" data-toggle="dropdown" href="#">Blood vessels
+	      		<span class="caret"></span></a>
+	      			<ul class="dropdown-menu">
+	      				<li><a href="bloodreceptors.html">Receptors</a></li>
+	      				<li><a href="bloodquizz.html">Test yourself</a></li>
+	      			</ul>
+	      </li>
+
+      	<li id="alone"><a href="contactme.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+
+	<h1> Receptor &#945 1 </h1>
+
+	<div class="localisation">
+
+		<h2>Localisation</h2>
+
+			<p>This receptor is a receptor coupled to a Gq protein, found mostly in smooth muscles such as blood vessels, respiratory airways and gastro-intestinal tract. It is a mostly postsynaptic receptor, which activation will lead to a contraction of the smooth muscles.</p>
+
+	</div>
+<!-- Picture of the receptor -->
+	
+	<div>
+
+		<h2>Agonists</h2>
+			<p class="molecules">
+				<figure> 
+					<img class="molecule" src="noradrenaline structure.svg" width="20%">
+					<figcaption>Noradrenaline</figcaption>
+				</figure>
+					
+				<figure>	
+					<img class="molecule" src="adrenaline structure.svg" width="20%">
+					<figcaption>Adrenaline</figcaption>
+				</figure>
+
+			</p>
+
+		<h2>Antagonists</h2> 
+			<p>Phentanolamine.</p>
+<!-- Picture -->
+
+	</div>
+
+		<h2>Pathway</h2>
+			<div class="pathway">
+
+				<div class="p1">When an agonist binds to the &#945<sub>1</sub> receptor, it activates the Gq protein</div>
+
+					<img id="receptorg" src="http://nhsjs.com/wp-content/uploads/2010/02/gprotein.jpg"><br>
+				
+				<div class="p2">In turns, the Gq protein activates an enzyme called the Phospholipase C&#946</div>
+
+				<button type="button" class="btn btn-primary">Activation of PLC&#946</button><br>
+
+				cut Phosphatidylinositol biphosphate (PIP<sub>2</sub>)into<br> 
+
+				Inositol 1,4,5-triphosphate (IP<sub>3</sub>) and diacylglycérol (DAG).<br>
+
+				IP<sub>3</sub> will act on a receptor at the surface of the endoplasmic reticulum to release calcium (Ca<sup>2<sup>+</sup></sup>)
+
+				Calcium will in turn bind to calmoduline to create a Ca<sup>2<sup>+</sup></sup>-calmoduline complexe. 
+
+				The Ca<sup>2<sup>+</sup></sup>-calmoduline complexe activates the Myosin Light Chain Kinase (MLCK)
+
+				The MLCK phosphorylate the Myosin Light Chain (MLC) into MLC-P
+
+				MLC-P provokes contraction of the smooth muscle fibre.
+
+			</div>
+
+
+	
+</div>
+
+
+<script>
+	$(document).ready(function(){ 
+    	//$("button").click(function(){
+        //	$("button").replaceWith(function(){
+        //		return "<h4>PLC&#946 activated</h4>";
+        //		    });
+//});
+//});
+// This ligne is to get the button to change class
+		$(".btn-primary").click(function() {
+				$(this).addClass("active");
+				$(this).addClass("btn-success");
+				$("div").addClass("open");
+				$(this).html("PLC&#946 activated");
+		   	});
+		//$(".secondary").click(function() {
+				//$(this).html("Activation of PLC&#946");
+		   // 	});
+		});
+
+
+</script>
+
+
+</body>
