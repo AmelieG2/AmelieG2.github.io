@@ -20,7 +20,7 @@ body {
 .navbar-header {
 	color: black;
 	font-weight: bold;
-	align-self: center;
+	
 }
 
 .dropdown {
@@ -35,13 +35,18 @@ body {
 
 .container {
 	max-width: 600px;
-	text-align: center justify;
+	text-align: justify;
 }	
 
 h1 {
 	text-align: center;
 	text-shadow: 1px 2px 5px
 }	
+
+h2 {
+	text-decoration: underline;
+	
+}
 
 img {
 	 display: block;
@@ -53,29 +58,28 @@ figcaption {
 	text-align: center;
 }
 
+#localisation {
+	text-indent: 20px;
+}
+
 .pathway {
 	text-align: center;
+	padding: 0px 50px 25px;
+	line-height: 1.5;
 
 }
 
 #receptorg {
 	padding: 0px 50px 25px;
-
-}
-
-.p1{
-	padding: 0px 50px 25px;
-
-}
-
-.p2 {
-	padding: 0px 50px 25px;
-
 }
 
 .btn-primary {
 	margin: 0px 50px 25px;
 
+}
+
+.arrow {
+	size: 30%;
 }
 
 

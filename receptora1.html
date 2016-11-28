@@ -94,22 +94,22 @@
 
 		<h2>Localisation</h2>
 
-			<p>This receptor is a receptor coupled to a Gq protein, found mostly in smooth muscles such as blood vessels, respiratory airways and gastro-intestinal tract. It is a mostly postsynaptic receptor, which activation will lead to a contraction of the smooth muscles.</p>
+			<p id="localisation">This receptor is a receptor coupled to a Gq protein, found mostly in smooth muscles such as blood vessels, respiratory airways and gastro-intestinal tract. It is a mostly postsynaptic receptor, which activation will lead to a contraction of the smooth muscles.</p>
 
+			<img id="receptorg" src="http://nhsjs.com/wp-content/uploads/2010/02/gprotein.jpg" width="80%">
 	</div>
-<!-- Picture of the receptor -->
 	
 	<div>
 
 		<h2>Agonists</h2>
 			<p class="molecules">
 				<figure> 
-					<img class="molecule" src="noradrenaline structure.svg" width="20%">
+					<img src="noradrenaline structure.svg" width="40%">
 					<figcaption>Noradrenaline</figcaption>
 				</figure>
 					
 				<figure>	
-					<img class="molecule" src="adrenaline structure.svg" width="20%">
+					<img src="adrenaline structure.svg" width="40%">
 					<figcaption>Adrenaline</figcaption>
 				</figure>
 
@@ -124,28 +124,42 @@
 		<h2>Pathway</h2>
 			<div class="pathway">
 
-				<div class="p1">When an agonist binds to the &#945<sub>1</sub> receptor, it activates the Gq protein</div>
+				<div>
+					
+					When an agonist binds to the &#945<sub>1</sub> receptor, it activates the Gq protein
 
-					<img id="receptorg" src="http://nhsjs.com/wp-content/uploads/2010/02/gprotein.jpg"><br>
+				</div>
 				
-				<div class="p2">In turns, the Gq protein activates an enzyme called the Phospholipase C&#946</div>
+				<div>
+					
+					In turns, the Gq protein activates an enzyme called the Phospholipase C&#946
 
-				<button type="button" class="btn btn-primary">Activation of PLC&#946</button><br>
+				</div>
 
-				cut Phosphatidylinositol biphosphate (PIP<sub>2</sub>)into<br> 
+				<div id="flip">
 
-				Inositol 1,4,5-triphosphate (IP<sub>3</sub>) and diacylglycérol (DAG).<br>
+					<button type="button" class="btn btn-primary" id="flip">Activate PLC&#946</button><br>
+				</div>
 
-				IP<sub>3</sub> will act on a receptor at the surface of the endoplasmic reticulum to release calcium (Ca<sup>2<sup>+</sup></sup>)
+				<div id="panel">
 
-				Calcium will in turn bind to calmoduline to create a Ca<sup>2<sup>+</sup></sup>-calmoduline complexe. 
+					&#8681;
 
-				The Ca<sup>2<sup>+</sup></sup>-calmoduline complexe activates the Myosin Light Chain Kinase (MLCK)
+				
 
-				The MLCK phosphorylate the Myosin Light Chain (MLC) into MLC-P
+					<button type="button" class="btn btn-default" data-somestringvalue-text="Inositol 1,4,5-triphosphate (IP<sub>3</sub>) + Diacylglycérol (DAG)" autocomplete="off">Phosphatidylinositol biphosphate (PIP<sub>2</sub>)</button><br>
 
-				MLC-P provokes contraction of the smooth muscle fibre.
+					IP<sub>3</sub> will act on a receptor at the surface of the endoplasmic reticulum to release calcium (Ca<sup>2<sup>+</sup></sup>)
 
+					Calcium will in turn bind to calmoduline to create a Ca<sup>2<sup>+</sup></sup>-calmoduline complexe. 
+
+					The Ca<sup>2<sup>+</sup></sup>-calmoduline complexe activates the Myosin Light Chain Kinase (MLCK)
+
+					The MLCK phosphorylate the Myosin Light Chain (MLC) into MLC-P
+
+					MLC-P provokes contraction of the smooth muscle fibre.
+
+				</div>
 			</div>
 
 
@@ -155,19 +169,29 @@
 
 <script>
 	$(document).ready(function(){ 
-    	//$("button").click(function(){
-        //	$("button").replaceWith(function(){
-        //		return "<h4>PLC&#946 activated</h4>";
-        //		    });
-//});
-//});
 // This ligne is to get the button to change class
 		$(".btn-primary").click(function() {
 				$(this).addClass("active");
 				$(this).addClass("btn-success");
 				$("div").addClass("open");
-				$(this).html("PLC&#946 activated");
+				$(this).html("PLC&#946 activated");	
 		   	});
+
+		$("#flip").click(function(){
+        		$("#panel").slideToggle("slow");
+    		});
+
+		//$("#flip").click(function() {
+				
+			// });
+
+// This ligne is to get the second button to change value
+		 $(".btn-default").click(function(){
+        		$(this).button('cut').delay(1000).queue(function(){
+           		$(this).button('somestringvalue');
+            	$(this).dequeue();
+        });        
+    });  
 		//$(".secondary").click(function() {
 				//$(this).html("Activation of PLC&#946");
 		   // 	});
