@@ -136,16 +136,11 @@
 
 				</div>
 
-				<div id="flip">
 
-					<button type="button" class="btn btn-primary" id="flip">Activate PLC&#946</button><br>
-				</div>
 
-				<div id="panel">
+				<div id="flip"><button type="button" class="btn btn-primary">Activate PLC&#946</button><br></div>
 
-					&#8681;
-
-				
+				<div id="panelA">&#8681;
 
 					<button type="button" class="btn btn-default" data-somestringvalue-text="Inositol 1,4,5-triphosphate (IP<sub>3</sub>) + Diacylglycérol (DAG)" autocomplete="off">Phosphatidylinositol biphosphate (PIP<sub>2</sub>)</button><br>
 
@@ -158,44 +153,31 @@
 					The MLCK phosphorylate the Myosin Light Chain (MLC) into MLC-P
 
 					MLC-P provokes contraction of the smooth muscle fibre.
-
-				</div>
-			</div>
+	</div>
 
 
-	
-</div>
 
+<script> 
+$(document).ready(function(){
 
-<script>
-	$(document).ready(function(){ 
-// This ligne is to get the button to change class
-		$(".btn-primary").click(function() {
+    	$("#flip").click(function(){
+        		$("#panelA").slideToggle("slow");
+    		});
+
+    	$(".btn-primary").click(function() {
 				$(this).addClass("active");
 				$(this).addClass("btn-success");
 				$("div").addClass("open");
 				$(this).html("PLC&#946 activated");	
 		   	});
 
-		$("#flip").click(function(){
-        		$("#panel").slideToggle("slow");
-    		});
-
-		//$("#flip").click(function() {
-				
-			// });
-
 // This ligne is to get the second button to change value
-		 $(".btn-default").click(function(){
+		$(".btn-default").click(function(){
         		$(this).button('cut').delay(1000).queue(function(){
            		$(this).button('somestringvalue');
             	$(this).dequeue();
-        });        
+        	});        
     });  
-		//$(".secondary").click(function() {
-				//$(this).html("Activation of PLC&#946");
-		   // 	});
-		});
 
 
 </script>
