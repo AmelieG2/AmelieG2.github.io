@@ -132,7 +132,7 @@
 				
 				<div>
 					
-					In turns, the Gq protein activates an enzyme called the Phospholipase C&#946
+					In turns, the Gq protein activates an enzyme called the Phospholipase C&#946 (PLC&#946)
 
 				</div>
 
@@ -142,21 +142,84 @@
 
 				</div>
 
-				<div id="panelA">&#8681;
+				<div id="panelA">
 
-					<button type="button" class="btn btn-default" data-somestringvalue-text="Inositol 1,4,5-triphosphate (IP<sub>3</sub>) + Diacylglycérol (DAG)" autocomplete="off">Phosphatidylinositol biphosphate (PIP<sub>2</sub>)</button><br>
+					<div id="flipB">
 
-					IP<sub>3</sub> will act on a receptor at the surface of the endoplasmic reticulum to release calcium (Ca<sup>2<sup>+</sup></sup>)
+						<button type="button" class="btn btn-info">CUTS<br>&#8681;</button>
 
-					Calcium will in turn bind to calmoduline to create a Ca<sup>2<sup>+</sup></sup>-calmoduline complexe. 
+					</div>
 
-					The Ca<sup>2<sup>+</sup></sup>-calmoduline complexe activates the Myosin Light Chain Kinase (MLCK)
 
-					The MLCK phosphorylate the Myosin Light Chain (MLC) into MLC-P
+					<div id="panelB">
 
-					MLC-P provokes contraction of the smooth muscle fibre.
+						<div id="flipC">
+
+							<button type="button" class="btn btn-default" data-somestringvalue-text="Inositol 1,4,5-triphosphate (IP<sub>3</sub>) + Diacylglycérol (DAG)" autocomplete="off">Phosphatidylinositol biphosphate (PIP<sub>2</sub>)</button><br>
+
+						</div>
+
+						<div id="panelC">
+
+							IP<sub>3</sub> acts on a receptor at the surface of the endoplasmic reticulum 
+
+							<div id="flipD">	
+								<button type="button" class="btn btn-info">RELEASES<br>&#8681;</button><br>
+
+							</div>
+
+							<div id="panelD">
+
+								Calcium (Ca<sup>2<sup>+</sup></sup>).<br>
+
+								<div id="flipE">
+
+									<button type="button" class="btn btn-info">BINDS<br>&#8681;</button><br>
+
+								</div>
+
+								<div id="panelE">
+
+									Ca<sup>2<sup>+</sup></sup>- calmoduline complexe.
+
+									<div id="flipF">
+
+										<button type="button" class="btn btn-info">ACTIVATES<br>&#8681;</button><br>
+
+									</div>
+
+									<div id="panelF">
+
+										Myosin Light Chain Kinase (MLCK)
+
+										<div id="flipG">
+										
+											<button type="button" class="btn btn-info">PHOSPHORYLATE<br>&#8681;</button><br>
+
+										</div>
+
+										<div id="panelG">
+
+											Myosin Light Chain Phosphate(MLC-P)
+
+											<button type="button" class="btn btn-danger">CONTRACTION of the smooth muscle fibre</button><br>
+
+											<img src="http://legacy.owensboro.kctcs.edu/GCaplan/anat/images/Image336.gif" width=60%>
+
+										</div>
+
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
 
 				</div>
+
 			</div>
 </div>
 
@@ -166,22 +229,47 @@
 <script> 
 $(document).ready(function(){
     $("#flip").click(function(){
-        $("#panelA").slideToggle("slow");
-    });
+        		$("#panelA").slideToggle("slow");
+    	});
+
     $(".btn-primary").click(function() {
 				$(this).addClass("active");
 				$(this).addClass("btn-success");
 				$("div").addClass("open");
 				$(this).html("PLC&#946 activated");	
-			
-		   	});
+		});
 
 // This ligne is to get the second button to change value
-		 $(".btn-default").click(function(){
-        		$(this).button('cut').delay(1000).queue(function(){
+	$(".btn-default").click(function(){
+        		$(this).button('cut').delay(100).queue(function(){
            		$(this).button('somestringvalue');
             	$(this).dequeue();
-        });        
+        });
+
+	$("#flipB").click(function(){
+        		$("#panelB").slideToggle("slow");
+       });
+
+	$("#flipC").click(function(){
+        		$("#panelC").slideToggle("slow");
+		});
+
+	$("#flipD").click(function(){
+        		$("#panelD").slideToggle("slow");
+		}); 
+
+	$("#flipE").click(function(){
+        		$("#panelE").slideToggle("slow");
+		});
+
+	$("#flipF").click(function(){
+        		$("#panelF").slideToggle("slow");
+		}); 
+
+	$("#flipG").click(function(){
+        		$("#panelG").slideToggle("slow");
+		});	 
+
     });  
 });
 
