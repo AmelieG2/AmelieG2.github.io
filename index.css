@@ -26,7 +26,6 @@ body {
 	color: black;
 }
 
-.container {
-	text-align: justify;
+figure {
 	align-content: center;
-}	
+}
