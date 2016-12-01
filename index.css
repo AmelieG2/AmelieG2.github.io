@@ -1,11 +1,31 @@
-.navbar-default {
-	background-image: url(http://physrev.physiology.org/content/physrev/96/4/1593/F1.large.jpg);
-	background-repeat: repeat;
-	background-size: contain;
+body {
+	font-family: 'Lora', serif;
+	margin: 0 auto;
+}	
 
+ .container-fluid {
+	background-image: url(http://physrev.physiology.org/content/physrev/96/4/1593/F1.large.jpg);
+	/*background-repeat: repeat;*/
+	background-size: contain, cover;
+	margin: 0 auto;
+	color: black;
+}
+
+.navbar-header {
+	color: black;
+	font-weight: bold;	
 }
 
 .dropdown {
-	background-color: rgba(200, 200, 200, 0.75);
+	background-color: rgba(235, 235, 235, 0.5);
+	color: black;
+}	
 
+#alone {
+	background-color: rgba(235, 235, 235, 0.5);
+	color: black;
+}
+
+.container {
+	text-align: justify;
 }	

@@ -13,4 +13,229 @@
 
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+	<link rel="stylesheet" type="text/css" href="receptorm1.css">
+
+	<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+
 </head>
+
+<body>
+
+<nav class="navbar navbar-default">
+
+  <div class="container-fluid">
+
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">PATHWAYS - <em>How to find your pharmalogical way</em></a>
+    </div>
+
+    <ul class="nav navbar-nav">
+
+      <li id="alone"><a href="index.html">Home</a></li>
+	      <li class="dropdown">
+			<a class="dropdown-toggle" data-toggle="dropdown" href="#">Adrenergique receptors
+	      		<span class="caret"></span></a>
+	      			<ul class="dropdown-menu">
+	      				<li><a href="receptora1.html">Receptor &#945<sub>1</sub></a></li>
+	      				<li><a href="receptorb2.html">Receptor &#946<sub>2</sub></a></li>
+	      			</ul>
+	      </li>
+
+	       <li class="active" class="dropdown">
+			<a class="dropdown-toggle" data-toggle="dropdown" href="#">Cholinergic receptors
+	      		<span class="caret"></span></a>
+	      			<ul class="dropdown-menu">
+	      				<li><a href="receptorm1.html">Receptors M1/M3</a></li>
+	      			</ul>
+	      </li>	
+
+      	<li id="alone"><a href="contactme.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+
+	<h1> Receptors M1 and M3</h1>
+
+	<div class="localisation">
+
+		<h2>Localisation</h2>
+
+			<p id="localisation">This receptor is a receptor coupled to a Gq protein, found mostly in smooth muscles such as blood vessels, respiratory airways and gastro-intestinal tract. It is a mostly postsynaptic receptor, which activation will lead to a contraction of the smooth muscles.</p>
+
+			<img id="receptorg" src="receptorm3.png">
+	</div>
+	
+	<div>
+
+		<h2>Agonists</h2>
+			<p class="molecules">
+				<figure> 
+					<img src="Acetylcholine.svg" width="40%">
+					<figcaption>Acetylcholine</figcaption>
+				</figure>
+
+			</p>
+
+		<h2>Antagonists</h2> 
+			Muscarinic antagonists, such as Scopolamine or Atropine, block specifically the muscarinic receptors are used in therapy for motion sickness or surgery.
+<!-- Picture -->
+
+	</div>
+
+		<h2>Pathway</h2>
+			<div class="pathway">
+
+				<div>
+					
+					When an agonist binds to the &#945<sub>1</sub> receptor, it activates the Gq protein
+
+				</div>
+				
+				<div>
+					
+					In turns, the Gq protein activates an enzyme called the Phospholipase C&#946 (PLC&#946)
+
+				</div>
+
+				<div id="flip">
+
+					<button type="button" class="btn btn-primary">Activate PLC&#946</button>
+
+				</div>
+
+				<div id="panelA">
+
+					<div id="flipB">
+
+						<button type="button" class="btn btn-info">CUTS<br>&#8681;</button>
+
+					</div>
+
+
+					<div id="panelB">
+
+						<div id="flipC">
+
+							<button type="button" class="btn btn-default" data-somestringvalue-text="Inositol 1,4,5-triphosphate (IP<sub>3</sub>) + Diacylglycérol (DAG)" autocomplete="off">Phosphatidylinositol biphosphate (PIP<sub>2</sub>)</button><br>
+
+						</div>
+
+						<div id="panelC">
+
+							IP<sub>3</sub> acts on a receptor at the surface of the endoplasmic reticulum 
+
+							<div id="flipD">	
+								<button type="button" class="btn btn-info">RELEASES<br>&#8681;</button><br>
+
+							</div>
+
+							<div id="panelD">
+
+								Calcium (Ca<sup>2<sup>+</sup></sup>).<br>
+
+								<div id="flipE">
+
+									<button type="button" class="btn btn-info">BINDS<br>&#8681;</button><br>
+
+								</div>
+
+								<div id="panelE">
+
+									Ca<sup>2<sup>+</sup></sup>- calmoduline complexe.
+
+									<div id="flipF">
+
+										<button type="button" class="btn btn-info">ACTIVATES<br>&#8681;</button><br>
+
+									</div>
+
+									<div id="panelF">
+
+										Myosin Light Chain Kinase (MLCK)
+
+										<div id="flipG">
+										
+											<button type="button" class="btn btn-info">PHOSPHORYLATE<br>&#8681;</button><br>
+
+										</div>
+
+										<div id="panelG">
+
+											Myosin Light Chain Phosphate(MLC-P) <big>&#8658;</big>
+
+											<button type="button" class="btn btn-danger">CONTRACTION of the smooth muscle fibre</button><br>
+
+											The M3 receptor will also have a relaxing action on blood vessel through the relaease of Nitric Oxide (NO).
+										</div>
+
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+</div>
+
+
+
+
+<script> 
+$(document).ready(function(){
+    $("#flip").click(function(){
+        		$("#panelA").slideToggle("slow");
+    	});
+
+    $(".btn-primary").click(function() {
+				$(this).addClass("active");
+				$(this).addClass("btn-success");
+				$("div").addClass("open");
+				$(this).html("PLC&#946 activated");	
+		});
+
+// This ligne is to get the second button to change value
+	$(".btn-default").click(function(){
+        		$(this).button('cut').delay(100).queue(function(){
+           		$(this).button('somestringvalue');
+            	$(this).dequeue();
+        });
+
+	$("#flipB").click(function(){
+        		$("#panelB").slideToggle("slow");
+       });
+
+	$("#flipC").click(function(){
+        		$("#panelC").slideToggle("slow");
+		});
+
+	$("#flipD").click(function(){
+        		$("#panelD").slideToggle("slow");
+		}); 
+
+	$("#flipE").click(function(){
+        		$("#panelE").slideToggle("slow");
+		});
+
+	$("#flipF").click(function(){
+        		$("#panelF").slideToggle("slow");
+		}); 
+
+	$("#flipG").click(function(){
+        		$("#panelG").slideToggle("slow");
+		});	 
+
+    });  
+});
+
+
+</script> 
+
+</body>

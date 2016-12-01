@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html>
 
 <head>
@@ -13,4 +13,197 @@
 
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+	<link rel="stylesheet" type="text/css" href="receptorb2.css">
+
+	<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+
 </head>
+
+<body>
+
+<nav class="navbar navbar-default">
+
+  <div class="container-fluid">
+
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">PATHWAYS - <em>How to find your pharmalogical way</em></a>
+    </div>
+
+    <ul class="nav navbar-nav">
+
+      <li id="alone"><a href="index.html">Home</a></li>
+	      <li class="active" class="dropdown">
+			<a class="dropdown-toggle" data-toggle="dropdown" href="#">Adrenergique receptors
+	      		<span class="caret"></span></a>
+	      			<ul class="dropdown-menu">
+	      				<li><a href="receptora1.html">Receptor &#945<sub>1</sub></a></li>
+	      				<li><a href="receptorb2.html">Receptor &#946<sub>2</sub></a></li>
+	      			</ul>
+	      </li>
+
+	       <li class="dropdown">
+			<a class="dropdown-toggle" data-toggle="dropdown" href="#">Cholinergic receptors
+	      		<span class="caret"></span></a>
+	      			<ul class="dropdown-menu">
+	      				<li><a href="receptorm1.html">Receptors M1/M3</a></li>
+	      			</ul>
+	      </li>	
+
+      	<li id="alone"><a href="contactme.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+
+	<h1> Receptor &#9462 </h1>
+
+	<div class="localisation">
+
+		<h2>Localisation</h2>
+
+			<p id="localisation">This receptor is a receptor coupled to a Gs protein, found once again in smooth muscles such as blood vessels, respiratory airways and gastro-intestinal tract. It is a postsynaptic receptor, involved into relaxation of the smooth muscles.</p>
+
+			<img id="receptorg" src="http://nhsjs.com/wp-content/uploads/2010/02/gprotein.jpg">
+	</div>
+	
+	<div>
+
+		<h2>Agonists</h2>
+The agonists for that receptor are catecholamines.
+			<p class="molecules">
+				<figure> 
+					<img src="noradrenaline structure.svg" width="40%">
+					<figcaption>Noradrenaline</figcaption>
+				</figure>
+					
+				<figure>	
+					<img src="adrenaline structure.svg" width="40%">
+					<figcaption>Adrenaline</figcaption>
+				</figure>
+
+			</p>
+
+		<h2>Antagonists</h2> 
+
+
+	</div>
+
+		<h2>Pathway</h2>
+			<div class="pathway">
+
+				<div>
+					
+					When an agonist binds to the &#946<sub>2</sub> receptor, it activates the Gs protein
+
+				</div>
+				
+				<div>
+					
+					In turns, the Gs protein activates an enzyme called Adenylate Cyclase (AC)
+
+				</div>
+
+				<div id="flip">
+
+					<button type="button" class="btn btn-primary">Activate AC</button>
+
+				</div>
+
+				<div id="panelA">
+
+					The AC is an enzyme responsible for the synthesis of the cyclic adenylate monophosphate (cAMP). The cAMP concentration in the cell will then rise.
+						
+
+						<div id="flipB">
+
+							<button type="button" class="btn btn-info">INCREASE<br> IN cAMP<br>&#8681;</button>
+
+						</div>
+
+						<div id="panelB">
+
+							cAMP is a mediateur for energy- it function is to bring a phosphate, the energy media for the cell, to another molecule so it can becomes activated. <br>cAMP then
+
+							<div id="flipC">
+
+								<button type="button" class="btn btn-info">ACTIVATES<br>&#8681;</button><br>
+
+							</div>
+
+							<div id="panelC">
+
+								Proteine Kinase A (PKA).<br>
+
+								<div id="flipD">
+
+									<button type="button" class="btn btn-info">PHOSPHORYLATES<br>&#8681;</button><br>
+
+								</div>
+
+								<div id="panelD">
+
+									Myosin Light Chain Phosphatase (MLCP)
+
+									<div id="flipE">
+										
+										<button type="button" class="btn btn-info">DEPHOSPHORYLATE<br>&#8681;</button><br>
+
+									</div>
+
+									<div id="panelE">
+
+										Myosin Light Chain Phosphate(MLC-P) loses the phosphate allowing its activation<br>
+
+										<button type="button" class="btn btn-danger">RELAXATION of the smooth muscle fibre</button><br>
+
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+				</div>
+
+
+
+</div>
+
+
+
+<script> 
+$(document).ready(function(){
+    $("#flip").click(function(){
+        		$("#panelA").slideToggle("slow");
+    	});
+
+    $(".btn-primary").click(function() {
+				$(this).addClass("active");
+				$(this).addClass("btn-success");
+				$("div").addClass("open");
+				$(this).html("AC activated");	
+		});
+
+	$("#flipB").click(function(){
+        		$("#panelB").slideToggle("slow");
+       });
+
+	$("#flipC").click(function(){
+        		$("#panelC").slideToggle("slow");
+		});
+
+	$("#flipD").click(function(){
+        		$("#panelD").slideToggle("slow");
+		}); 
+
+	$("#flipE").click(function(){
+        		$("#panelE").slideToggle("slow");
+		}); 
+});
+
+
+</script> 
+
+</body>

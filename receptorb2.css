@@ -1,5 +1,3 @@
-/* This is the CSS file for the receptor a1 */
-
 body {
 	font-family: 'Lora', serif;
 	margin: 0 auto;
@@ -91,9 +89,9 @@ figcaption {
     display: none;
 }
 
-/*#panelB {
+#panelB {
     display: none;
-}*/
+}
 
 #panelC {
     display: none;
@@ -107,13 +105,6 @@ figcaption {
     display: none;
 }
 
-#panelF {
-    display: none;
-}
-
-#panelG {
-    display: none;
-}
 
 
 {}
